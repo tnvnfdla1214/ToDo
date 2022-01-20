@@ -3,10 +3,10 @@ package com.example.todo.presentation.list
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.viewModelScope
-import com.example.todo.ToDoEntity
-import com.example.todo.domain.todo.DeleteAllToDoItemUseCase
-import com.example.todo.domain.todo.GetToDoListUseCase
-import com.example.todo.domain.todo.UpdateToDoUseCase
+import com.example.todo.data.entitiy.ToDoEntity
+import com.example.todo.domain.usecase.DeleteAllToDoItemUseCase
+import com.example.todo.domain.usecase.GetToDoListUseCase
+import com.example.todo.domain.usecase.UpdateToDoUseCase
 import com.example.todo.presentation.BaseViewModel
 import dagger.hilt.android.lifecycle.HiltViewModel
 

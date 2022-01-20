@@ -1,7 +1,7 @@
-package com.example.todo.domain.todo
+package com.example.todo.domain.usecase
 
-import com.example.todo.ToDoEntity
-import com.example.todo.ToDoRepository
+import com.example.todo.data.entitiy.ToDoEntity
+import com.example.todo.data.repository.ToDoRepository
 import javax.inject.Inject
 
 

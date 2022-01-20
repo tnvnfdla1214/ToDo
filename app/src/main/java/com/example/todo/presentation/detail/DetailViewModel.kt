@@ -1,24 +1,19 @@
 package com.example.todo.presentation.detail
 
-import android.content.ContextWrapper
-import android.os.Bundle
 import androidx.lifecycle.*
-import androidx.savedstate.SavedStateRegistryOwner
-import com.example.todo.ToDoEntity
-import com.example.todo.domain.todo.DeleteToDoItemUseCase
-import com.example.todo.domain.todo.GetToDoItemUseCase
-import com.example.todo.domain.todo.InsertToDoUseCase
-import com.example.todo.domain.todo.UpdateToDoUseCase
+import com.example.todo.data.entitiy.ToDoEntity
+import com.example.todo.domain.usecase.DeleteToDoItemUseCase
+import com.example.todo.domain.usecase.GetToDoItemUseCase
+import com.example.todo.domain.usecase.InsertToDoUseCase
+import com.example.todo.domain.usecase.UpdateToDoUseCase
 import com.example.todo.presentation.BaseViewModel
 import dagger.assisted.Assisted
 import dagger.assisted.AssistedFactory
 import dagger.assisted.AssistedInject
-import dagger.hilt.android.lifecycle.HiltViewModel
 
 
 import kotlinx.coroutines.launch
 import java.lang.Exception
-import javax.inject.Inject
 
 
 internal class DetailViewModel @AssistedInject constructor(

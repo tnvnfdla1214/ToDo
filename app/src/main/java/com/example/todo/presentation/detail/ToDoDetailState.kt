@@ -1,6 +1,6 @@
 package com.example.todo.presentation.detail
 
-import com.example.todo.ToDoEntity
+import com.example.todo.data.entitiy.ToDoEntity
 
 
 sealed class ToDoDetailState {

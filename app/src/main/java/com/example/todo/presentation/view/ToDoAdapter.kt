@@ -5,7 +5,7 @@ import android.view.ViewGroup
 import androidx.core.content.ContextCompat
 import androidx.recyclerview.widget.RecyclerView
 import com.example.todo.R
-import com.example.todo.ToDoEntity
+import com.example.todo.data.entitiy.ToDoEntity
 import com.example.todo.databinding.ViewholderTodoItemBinding
 
 

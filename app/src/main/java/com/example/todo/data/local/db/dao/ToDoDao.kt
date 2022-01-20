@@ -1,6 +1,7 @@
-package com.example.todo
+package com.example.todo.data.local.db.dao
 
 import androidx.room.*
+import com.example.todo.data.entitiy.ToDoEntity
 
 @Dao
 interface ToDoDao {
