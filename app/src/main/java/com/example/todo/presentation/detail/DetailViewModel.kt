@@ -6,7 +6,7 @@ import com.example.todo.domain.usecase.DeleteToDoItemUseCase
 import com.example.todo.domain.usecase.GetToDoItemUseCase
 import com.example.todo.domain.usecase.InsertToDoUseCase
 import com.example.todo.domain.usecase.UpdateToDoUseCase
-import com.example.todo.presentation.BaseViewModel
+import com.example.todo.presentation.base.BaseViewModel
 import dagger.assisted.Assisted
 import dagger.assisted.AssistedFactory
 import dagger.assisted.AssistedInject

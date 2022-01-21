@@ -7,7 +7,7 @@ import com.example.todo.data.entitiy.ToDoEntity
 import com.example.todo.domain.usecase.DeleteAllToDoItemUseCase
 import com.example.todo.domain.usecase.GetToDoListUseCase
 import com.example.todo.domain.usecase.UpdateToDoUseCase
-import com.example.todo.presentation.BaseViewModel
+import com.example.todo.presentation.base.BaseViewModel
 import dagger.hilt.android.lifecycle.HiltViewModel
 
 import kotlinx.coroutines.*

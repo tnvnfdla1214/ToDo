@@ -9,11 +9,14 @@ import androidx.activity.viewModels
 import androidx.core.view.isGone
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.todo.R
+import com.example.todo.databinding.ActivityDetailBinding
 import com.example.todo.databinding.ActivityListBinding
-import com.example.todo.presentation.BaseActivity
+import com.example.todo.presentation.base.BaseActivity
+import com.example.todo.presentation.base.BindingActivity
 import com.example.todo.presentation.detail.DetailActivity
 //import com.example.todo.presentation.detail.DetailActivity
 import com.example.todo.presentation.detail.DetailMode
+import com.example.todo.presentation.detail.DetailViewModel
 import com.example.todo.presentation.view.ToDoAdapter
 import dagger.hilt.android.AndroidEntryPoint
 
@@ -24,22 +27,15 @@ import kotlinx.coroutines.Job
 import kotlin.coroutines.CoroutineContext
 
 @AndroidEntryPoint
-internal class ListActivity : BaseActivity<ListViewModel>(), CoroutineScope {
+internal class ListActivity : BindingActivity<ActivityListBinding, ListViewModel>(R.layout.activity_list), CoroutineScope {
 
     override val coroutineContext: CoroutineContext
         get() = Dispatchers.Main + Job()
-
-    private lateinit var binding: ActivityListBinding
 
     private val adapter = ToDoAdapter()
 
     override val viewModel: ListViewModel by viewModels()
 
-    override fun onCreate(savedInstanceState: Bundle?) {
-        super.onCreate(savedInstanceState)
-        binding = ActivityListBinding.inflate(layoutInflater)
-        setContentView(binding.root)
-    }
 
     private fun initViews(binding: ActivityListBinding) = with(binding) {
         recyclerView.layoutManager = LinearLayoutManager(this@ListActivity, LinearLayoutManager.VERTICAL, false)

@@ -1,9 +1,9 @@
-package com.example.todo.presentation
+package com.example.todo.presentation.base
 
 import androidx.lifecycle.ViewModel
 import kotlinx.coroutines.Job
 
-internal abstract class BaseViewModel: ViewModel() {
+abstract class BaseViewModel: ViewModel() {
 
     abstract fun fetchData(): Job
 

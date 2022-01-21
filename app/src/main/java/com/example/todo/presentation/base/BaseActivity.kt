@@ -1,4 +1,4 @@
-package com.example.todo.presentation
+package com.example.todo.presentation.base
 
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity

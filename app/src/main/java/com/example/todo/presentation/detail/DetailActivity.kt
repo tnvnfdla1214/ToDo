@@ -7,16 +7,15 @@ import android.os.Bundle
 import android.widget.Toast
 import androidx.activity.viewModels
 import androidx.core.view.isGone
+import com.example.todo.R
 import com.example.todo.databinding.ActivityDetailBinding
-import com.example.todo.presentation.BaseActivity
-import com.example.todo.presentation.list.ListViewModel
+import com.example.todo.presentation.base.BaseActivity
+import com.example.todo.presentation.base.BindingActivity
 import dagger.hilt.android.AndroidEntryPoint
 import javax.inject.Inject
 
 @AndroidEntryPoint
-internal class DetailActivity : BaseActivity<DetailViewModel>() {
-
-    private lateinit var binding: ActivityDetailBinding
+internal class DetailActivity : BindingActivity<ActivityDetailBinding,DetailViewModel>(R.layout.activity_detail) {
 
     //override val viewModel: DetailViewModel by viewModels()
 
@@ -47,9 +46,7 @@ internal class DetailActivity : BaseActivity<DetailViewModel>() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        binding = ActivityDetailBinding.inflate(layoutInflater)
 
-        setContentView(binding.root)
         setResult(Activity.RESULT_OK)
     }
 
